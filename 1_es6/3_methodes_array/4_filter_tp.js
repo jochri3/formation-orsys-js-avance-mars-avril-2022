@@ -93,29 +93,18 @@ const contacts = [
 ];
 
 /*
-  1 - Créer un nouveau tableau :
-  - Le firstname et last name doivent être combinés en fullName
+  1.Créer un nouveau tableau :
+  - Le firstname et lastname doivent être combinés en fullName
   - L'attribut "address" doit devenir un objet content les informations suivantes : address,phone,email,company
   - Retirer les attributs : gender,guid et isActive
-
-  2 - Créer un tableau avec les nom et prenoms
+  
+  2.Créer un tableau content le fullName
+  
+  3.D'avoir un tableau qui contient uniquement les contact femmes,ayant plus de 30 ans et qui sont actives
 */
 
-// 1
-const e1 = contacts.map(function (contact) {  
-  return {
-    _id: contact._id,
-    fullName: contact.firstName + " " + contact.lastName,
-    age: contact.age,
-    addresse: {
-      company: contact.company,
-      email: contact.email,
-      phone: contact.phone,
-      address: contact.address,
-    },
-  };
+const e3 = contacts.filter(function (contact) {
+  return contact.gender === "female" && contact.age > 30 && contact.isActive;
 });
 
-const e2 = contacts.map(function (contact) {
-  return contact.firstName + " " + contact.lastName;
-});
+console.log(e3);
