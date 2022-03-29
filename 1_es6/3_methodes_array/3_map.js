@@ -65,3 +65,17 @@ const fruitsFormated2 = fruits2.map(function (fruit) {
 console.log(fruitsFormated2);
 
 console.log("=======================");
+
+// {
+//     id:432,
+//     fullName:"sdfhdskfhds sdfjdsofljdfljd",
+//     age:34,
+//     address:{
+//         address:"sdfsdfd",
+//         phone:"+3343874358943",
+//         email:"sdfd@gg.com",
+//         company:"Facebvook"
+//     }
+// }
+
+
