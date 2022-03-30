@@ -92,25 +92,33 @@ const contacts = [
   },
 ];
 
-/*
-  1.Créer un nouveau tableau :
-  - Le firstname et lastname doivent être combinés en fullName
-  - L'attribut "address" doit devenir un objet content les informations suivantes : address,phone,email,company
-  - Retirer les attributs : gender,guid et isActive
-  
-  2.Créer un tableau content le fullName
-  
-  3.D'avoir un tableau qui contient uniquement les contact femmes,ayant plus de 30 ans et qui sont actives
-
-  4.Est-ce que le tableau ne contient que des hommes actifs?
-*/
-
-const e4 = contacts.every(function (contact) {
-  return contact.gender === "male" && contact.isActive;
+const contact2 = contacts.map(({ firstName, lastName, company }) => {
+  return { firstName, lastName, company };
 });
 
-const e4_2 = contacts.every(
-  ({ gender, isActive }) => gender === "male" && isActive
-);
+// Use case
+const data = {
+  email: "chris@gmail.com",
+  mdp: "1234",
+  username: "chris888",
+};
 
-console.log(e3);
+const url = "http://api/monsite.com/users";
+
+// ES5
+$.ajax({
+  method: "POST",
+  data: data,
+  url: url,
+  success: function () {},
+  error: function () {},
+});
+
+// ES6
+$.ajax({
+  data,
+  url,
+  method: "POST",
+  success() {},
+  error() {},
+});
