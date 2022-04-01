@@ -32,3 +32,8 @@ App.post("/api/contacts", (request, response) => {
 App.listen(PORT, () => {
   console.log(`Le serveur écoute sur le port -- ${PORT}`);
 });
+
+// mysql2 : npm mysql2 : https://www.npmjs.com/package/mysql2
+// knex  : http://knexjs.org/
+// Sequelize : https://sequelize.org/
+// Prisma : https://www.prisma.io/
