@@ -7,6 +7,14 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="./stratgy_pattern.js"></script>
+    <h1>Choisir service de Livraison</h1>
+    <p>Poids du package : <input type="number" id="weight" /></p>
+    <form id="form" action="">
+      <p><input name="shipping" type="radio" value="fedex" />&nbsp;Fedex</p>
+      <p><input name="shipping" type="radio" value="ups" />&nbsp;UPS</p>
+      <p><input name="shipping" type="radio" value="usps" />&nbsp;USPS</p>
+    </form>
+    <p>Coût : <b id="cout"></b>€</p>
+    <script type="module" src="./strategy_project.js"></script>
   </body>
 </html>
