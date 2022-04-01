@@ -1,4 +1,6 @@
 const contactsList = document.querySelector("#contacts");
+const loader = document.querySelector("#loader");
+loader.style.display = "none";
 
 //
 function ContactRow(contact) {
@@ -40,9 +42,11 @@ function createColumn(value) {
 // }
 
 function init() {
+  loader.style.display = "block";
   axios
     .get("http://localhost:3000/api/contacts")
     .then((response) => {
+      loader.style.display = "none";
       const contacts = response.data;
       for (let contact of contacts) {
         contactsList.appendChild(ContactRow(contact));
