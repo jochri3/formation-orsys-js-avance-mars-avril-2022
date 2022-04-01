@@ -10,6 +10,7 @@ function ContactRow(contact) {
   //     contact.lastName,
   //     contact.email,
   //   ];
+
   const row = document.createElement("tr");
 
   const id = createColumn(contact._id);
@@ -20,7 +21,16 @@ function ContactRow(contact) {
 
   const email = createColumn(contact.email);
 
-  row.append(id, fname, lname, email);
+  const view = document.createElement("td");
+  const viewButton = document.createElement("button");
+  viewButton.innerText = "Voir";
+  viewButton.addEventListener("click", function () {
+    window.location.href = `./pages/create-contact.html?id=${contact._id}`;
+  });
+
+  view.appendChild(viewButton);
+
+  row.append(id, fname, lname, email, view);
   //   for (let value of values) {
   //     row.appendChild(createColumn(value));
   //   }
@@ -48,6 +58,7 @@ function init() {
     .then((response) => {
       loader.style.display = "none";
       const contacts = response.data;
+      localStorage.setItem("contacts", JSON.stringify(contacts));
       for (let contact of contacts) {
         contactsList.appendChild(ContactRow(contact));
       }
