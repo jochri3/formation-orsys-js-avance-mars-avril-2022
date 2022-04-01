@@ -3,16 +3,24 @@ const CONSTANTES = Object.freeze({
   TESTER: "tester",
 });
 
-class Developer {
-  constructor(name) {
-    this.name = name;
+class Personne {
+  constructor(fname, lname, age) {
+    this.fname = fname;
+    this.lname = lname;
+    this.age = age;
+  }
+}
+
+class Developer extends Personne {
+  constructor(fname, lname, age) {
+    super(fname, lname, age);
     this.type = CONSTANTES.DEVELOPER;
   }
 }
 
 class Tester {
-  constructor(name) {
-    this.name = name;
+  constructor(fname, lname, age) {
+    super(fname, lname, age);
     this.type = CONSTANTES.TESTER;
   }
 }
