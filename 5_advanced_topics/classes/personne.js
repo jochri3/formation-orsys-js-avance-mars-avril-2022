@@ -4,6 +4,10 @@ class Personne {
     this.lname = lname;
     this.age = age;
   }
+
+  sePresenter() {
+    return "Je me présente";
+  }
 }
 
 export default Personne;

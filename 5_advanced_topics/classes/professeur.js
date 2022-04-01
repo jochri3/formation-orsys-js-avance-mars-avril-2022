@@ -5,6 +5,10 @@ class Professeur extends Personne {
     super(fname, lname, age);
     this.matiereEnseignees = matiereEnseignees;
   }
+
+  sePresenter() {
+    return `Je suis un enseignant et je m'appelle ${this.fname} ${this.lname}`;
+  }
 }
 
 export default Professeur;

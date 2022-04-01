@@ -9,5 +9,5 @@ const prof = new Professeur("Tryphon", "Tournesol", 60, [
 
 const tintin = new Etudiant("Tintin", "Le Belge", 25, "L1");
 
-console.log(prof);
-console.log(tintin);
+console.log(prof.sePresenter());
+console.log(tintin.sePresenter());
