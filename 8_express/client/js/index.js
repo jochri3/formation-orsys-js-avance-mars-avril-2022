@@ -25,7 +25,7 @@ function ContactRow(contact) {
   const viewButton = document.createElement("button");
   viewButton.innerText = "Voir";
   viewButton.addEventListener("click", function () {
-    window.location.href = `./pages/create-contact.html?id=${contact._id}`;
+    window.location.href = `./pages/details-contact.html?id=${contact._id}`;
   });
 
   view.appendChild(viewButton);
