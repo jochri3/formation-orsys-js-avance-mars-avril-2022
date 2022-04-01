@@ -1,13 +1,14 @@
 const express = require("express");
 const contacts = require("./database");
 const { nanoid } = require("nanoid");
-const { application } = require("express");
+const cors = require("cors");
 
 const App = express();
 
 const PORT = 3000;
 
 App.use(express.json());
+App.use(cors());
 
 App.get("/api/contacts", (request, response) => {
   response.send(contacts);
@@ -26,7 +27,6 @@ App.post("/api/contacts", (request, response) => {
   const data = request.body;
   contacts.push({ ...data, _id: nanoid() });
   response.status(201).send({ message: "Resource created successfully" });
-
 });
 
 App.listen(PORT, () => {
