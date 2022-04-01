@@ -1,0 +1,26 @@
+{
+  "name": "mars-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jochri3/formation-orsys-js-avance-mars-avril-2022.git"
+  },
+  "author": "Christian Lisangola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jochri3/formation-orsys-js-avance-mars-avril-2022/issues"
+  },
+  "homepage": "https://github.com/jochri3/formation-orsys-js-avance-mars-avril-2022#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nanoid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
